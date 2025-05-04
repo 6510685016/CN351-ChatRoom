@@ -21,7 +21,6 @@ router.post('/login', (req, res) => {
     if (err) return res.status(500).json({ error: err.message });
     if (!user) return res.status(401).json({ error: 'Invalid credentials' });
 
-    // ส่ง role กลับไปด้วย
     res.json({ id: user.id, username: user.username, role: user.role });
   });
 });

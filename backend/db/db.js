@@ -26,12 +26,20 @@ db.serialize(() => {
       'admin'
     );
   `);
-
   db.run(`
     INSERT OR IGNORE INTO users (
       username, password, role
     ) VALUES (
-      'user',
+      'user1',
+      'password',
+      'user'
+    );
+  `);
+  db.run(`
+    INSERT OR IGNORE INTO users (
+      username, password, role
+    ) VALUES (
+      'user2',
       'password',
       'user'
     );
